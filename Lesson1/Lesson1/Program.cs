@@ -17,6 +17,10 @@ namespace Lesson1
                 Console.WriteLine("Kokia darbuotojo darbo patirtis?");
 
                 string input = Console.ReadLine();
+                if (input=="q")
+                {
+                    break;
+                }
                 string[] competence = new[] { "Entry", "Junior", "Mid-level", "Professional", "Senior" };
 
                 double experience;
@@ -27,7 +31,7 @@ namespace Lesson1
                     continue;
 
                 }
-
+               
 
                 if (experience == 0)
                 {
@@ -58,7 +62,7 @@ namespace Lesson1
 
                 }
             }
-            Console.ReadLine();
+          
         }
         
 
