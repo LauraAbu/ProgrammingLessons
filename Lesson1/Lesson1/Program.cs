@@ -13,7 +13,7 @@ namespace Lesson1
             Console.WriteLine("Kokia darbuotojo darbo patirtis?");
 
             string input = Console.ReadLine();
-
+            string[] competence = new[] { "Entry", "Junior", "Mid-level", "Professional", "Senior"};
             double experience;
             if (double.TryParse(input, out experience)== false)
             {
@@ -26,20 +26,20 @@ namespace Lesson1
 
             if (experience == 0)
             {
-                Console.WriteLine("Entry");
+                Console.WriteLine(competence[0]);
             }
             else if (experience > 0 && experience < 2)
             {
-                Console.WriteLine("Junior");
+                Console.WriteLine(competence[1]);
             }
             else if (experience >= 2 && experience < 4)
             {
-                Console.WriteLine("Mid-level");
+                Console.WriteLine(competence[2]);
 
             }
             else if (experience >= 4 && experience < 6.5)
             {
-                Console.WriteLine("Professional");
+                Console.WriteLine(competence[3]);
                 
             }
            
@@ -49,7 +49,7 @@ namespace Lesson1
             }
             else if (experience > 6.5)
             {
-                Console.WriteLine("Senior");
+                Console.WriteLine(competence[4]);
 
             }
             Console.ReadLine();
