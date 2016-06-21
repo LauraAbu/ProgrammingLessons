@@ -34,14 +34,15 @@ namespace Lesson1
                 Console.WriteLine("Professional");
                 
             }
-            else if (experience >6.5)
+           
+            else if (experience <0 || experience >100)
+            {
+                Console.WriteLine("Klaida: Darbo patirtis metais negali buti mazesne nei 0 arba didesne nei 100.");
+            }
+            else if (experience > 6.5)
             {
                 Console.WriteLine("Senior");
-            
-            }
-            else 
-            {
-                Console.WriteLine("Nesamone");
+
             }
             Console.ReadLine();
         }
