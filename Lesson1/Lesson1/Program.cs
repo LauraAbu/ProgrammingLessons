@@ -14,7 +14,15 @@ namespace Lesson1
 
             string input = Console.ReadLine();
 
-            double experience = double.Parse(input);
+            double experience;
+            if (double.TryParse(input, out experience)== false)
+            {
+                Console.WriteLine("Klaida: Ivestas blogas argumentas. Ivesti galima tik skaiciu.");
+                Console.ReadLine();
+                return;
+            
+            }
+                
 
             if (experience == 0)
             {
