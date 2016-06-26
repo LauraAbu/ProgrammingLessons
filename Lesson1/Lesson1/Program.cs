@@ -12,59 +12,48 @@ namespace Lesson1
         {
             for (int i = 0; i < 100; i++)
             {
-
-
                 Console.WriteLine("Kokia darbuotojo darbo patirtis?");
 
                 string input = Console.ReadLine();
-                if (input=="q")
+                if (input == "q")
                 {
                     break;
                 }
-                string[] competence = new[] { "Entry", "Junior", "Mid-level", "Professional", "Senior" };
+                string[] competenceLevelArray = new[] { "Entry", "Junior", "Mid-level", "Professional", "Senior" };
 
-                double experience;
-                if (double.TryParse(input, out experience) == false)
+                double workExperienceInYears;
+                if (!double.TryParse(input, out workExperienceInYears))
                 {
                     Console.WriteLine("Klaida: Ivestas blogas argumentas. Ivesti galima tik skaiciu.");
                    
                     continue;
-
                 }
                
-
-                if (experience == 0)
+                if (workExperienceInYears == 0)
                 {
-                    Console.WriteLine(competence[0]);
+                    Console.WriteLine(competenceLevelArray[0]);
                 }
-                else if (experience > 0 && experience < 2)
+                else if (workExperienceInYears > 0 && workExperienceInYears < 2)
                 {
-                    Console.WriteLine(competence[1]);
+                    Console.WriteLine(competenceLevelArray[1]);
                 }
-                else if (experience >= 2 && experience < 4)
+                else if (workExperienceInYears >= 2 && workExperienceInYears < 4)
                 {
-                    Console.WriteLine(competence[2]);
-
+                    Console.WriteLine(competenceLevelArray[2]);
                 }
-                else if (experience >= 4 && experience < 6.5)
+                else if (workExperienceInYears >= 4 && workExperienceInYears < 6.5)
                 {
-                    Console.WriteLine(competence[3]);
-
+                    Console.WriteLine(competenceLevelArray[3]);
                 }
-
-                else if (experience < 0 || experience > 100)
+                else if (workExperienceInYears < 0 || workExperienceInYears > 100)
                 {
                     Console.WriteLine("Klaida: Darbo patirtis metais negali buti mazesne nei 0 arba didesne nei 100.");
                 }
-                else if (experience > 6.5)
+                else if (workExperienceInYears > 6.5)
                 {
-                    Console.WriteLine(competence[4]);
-
+                    Console.WriteLine(competenceLevelArray[4]);
                 }
             }
-          
         }
-        
-
     }
 }
