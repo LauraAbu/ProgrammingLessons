@@ -10,25 +10,24 @@ namespace Lesson1
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i < 100; i++)
+            double workExperienceInYears; // = 0, reikėtų parašyti, kad reikšė yra 0 lygi. Jeigu incenizuojame kintamaji jam reikia priskiti reiksme. 
+            string[] competenceLevelArray = new[] { "Entry", "Junior", "Mid-level", "Professional", "Senior" };//jeigu reikia rasyti kintamaji tarp stringo bloko - apsirasome virsuje. Jeigu tai yra funkcijos kintamasis reikia apsirasyti IF bloke                                                                                                   // išsikelia virs FOR kad nebutu apkraunama PC atmintis. 
+            for (int i = 0; i < 100; i++) //amžinas FOR ciklas yra FOR(;;) jis neturi jokios salygos. While (true) ciklas sukasi tol kol bus tiesa.
             {
                 Console.WriteLine("Kokia darbuotojo darbo patirtis?");
 
                 string input = Console.ReadLine();
                 if (input == "q")
                 {
-                    break;
+                    break; //išėjimas tik iš FOR ciklo. return iseina is kodo logikos. 
                 }
-                string[] competenceLevelArray = new[] { "Entry", "Junior", "Mid-level", "Professional", "Senior" };
-
-                double workExperienceInYears;
-                if (!double.TryParse(input, out workExperienceInYears))
-                {
+            
+                if (!double.TryParse(input, out workExperienceInYears))//!atvirkštinė logika - jeigu nelygu true
+                { //galima cia rasyti if (input == "q")
                     Console.WriteLine("Klaida: Ivestas blogas argumentas. Ivesti galima tik skaiciu.");
-                   
-                    continue;
+                    continue;//netikrina logikos return
                 }
-               
+              
                 if (workExperienceInYears == 0)
                 {
                     Console.WriteLine(competenceLevelArray[0]);
@@ -45,7 +44,7 @@ namespace Lesson1
                 {
                     Console.WriteLine(competenceLevelArray[3]);
                 }
-                else if (workExperienceInYears < 0 || workExperienceInYears > 100)
+                else if (workExperienceInYears < 0 || workExperienceInYears > 100) //turi būti pakelta iki pirmutinio IF
                 {
                     Console.WriteLine("Klaida: Darbo patirtis metais negali buti mazesne nei 0 arba didesne nei 100.");
                 }
