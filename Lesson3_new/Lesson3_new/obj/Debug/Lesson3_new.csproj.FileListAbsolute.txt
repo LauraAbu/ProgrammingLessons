@@ -1,0 +1,5 @@
+c:\Projects\Lesson3_new\Lesson3_new\bin\Debug\Lesson3_new.exe.config
+c:\Projects\Lesson3_new\Lesson3_new\bin\Debug\Lesson3_new.exe
+c:\Projects\Lesson3_new\Lesson3_new\bin\Debug\Lesson3_new.pdb
+c:\Projects\Lesson3_new\Lesson3_new\obj\Debug\Lesson3_new.exe
+c:\Projects\Lesson3_new\Lesson3_new\obj\Debug\Lesson3_new.pdb
